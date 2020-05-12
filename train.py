@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 
 import torch
@@ -89,9 +91,9 @@ for e in range(TrainConfig.epochs):
     # save model
     torch.save(
         encoder_model.state_dict(),
-        f'models/encoder_e{e+1:02d}.pth'
+        f'models/{DataConfig.language}/encoder_e{e+1:02d}.pth'
     )
     torch.save(
         decoder_model.state_dict(),
-        f'models/decoder_e{e+1:02d}.pth'
+        f'models/{DataConfig.language}/decoder_e{e+1:02d}.pth'
     )

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os
 import argparse
 
@@ -80,7 +82,7 @@ class G2P(object):
             plt.imshow(att_weights, cmap='gray')
             plt.yticks(range(y), ['<sos>'] + list(word) + ['<eos>'])
             plt.xticks(range(x), phonemes)
-            plt.savefig(f'attention/{word}.png')
+            plt.savefig(f'attention/{DataConfig.language}/{word}.png')
 
         return phonemes
 
